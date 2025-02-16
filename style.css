@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;  /* Space between elements */
+    align-items: center;  /* Align items vertically centered */
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+#cart-info {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#cartBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#cartBtn:hover {
+    background-color: #218838;
+}
+
+/* Product List */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-card .product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    padding: 0 0 0 40px;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+    padding: 0 0 0 40px;
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.product-card button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 0px 34px 33px;
+}
+
+.product-card button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Cart Modal */
+.cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.cart-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cart-footer button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.cart-footer button:hover {
+    background-color: #218838;
+}
+
+/* Promo Code Section */
+.promo-code-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.promo-code-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.promo-code-section button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.promo-code-section button:hover {
+    background-color: #218838;
+}
+
+/* Media Queries for Responsiveness */
+
+/* 4 Columns for larger screens */
+@media (min-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 3 Columns for medium-sized screens */
+@media (max-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 2 Columns for smaller screens */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 Column for very small screens */
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Set background color */
+    color: white; /* Text color */
+    padding: 15px 20px;
+    text-align: center; /* Center the text */
+    position: relative; /* Optional for positioning */
+    bottom: 0; /* Optional to make it stick to the bottom */
+    width: 100%; /* Full width */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
