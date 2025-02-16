@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Product promo code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Shopping Product promo code</h1>
+        <div id="cart-info">
+            <button id="cartBtn">View Cart (<span id="cartCount">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="product-list" class="product-list">
+            <!-- Products will be loaded here dynamically -->
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <h2>View Cart</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will appear here -->
+            </div>
+
+            <!-- Promo Code Section -->
+            <div class="promo-code-section">
+                <input type="text" id="promoCodeInput" placeholder="Enter Promo Code" />
+                <button id="applyPromoCodeBtn">Apply</button>
+                <p id="promoCodeMessage"></p>
+            </div>
+
+            <div class="cart-footer">
+                <h3>Total: $<span id="cartTotal">0.00</span></h3>
+                <h3 id="discountedTotal">Discounted Total: $0.00</h3>
+                <button id="checkoutBtn">Checkout</button>
+                <button id="clearCartBtn">Clear Cart</button>
+                <button id="closeCartBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shopping Cart. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
